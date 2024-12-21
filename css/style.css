@@ -1,0 +1,450 @@
+﻿body {
+    font-family: Baskerville;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+	background-color:rgba(159, 236, 253, 1);
+
+}
+.dark {
+	background-color: black;
+	color: white;
+
+}
+.copyright{
+	text-align:center;
+	
+}
+header {
+    padding: 80px;
+	background-image:url(../images/fond1.png);
+}
+
+header h1 {
+	color:rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+nav {
+    background-color: rgba(75, 217, 192, 0);
+    padding: 10px;
+	text-align:center;    
+	position: fixed;
+    width: 100%;
+    top: 0;
+
+}
+
+main .paragraphe{
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	width: 87%;
+	margin: 30px;
+	padding: 50px;
+	border-radius: 25px;
+	background-color:rgba(122, 231, 255, 1);
+}
+main button {
+    background-color: rgba(223, 207, 207,0);
+    display: inline-block; 
+    padding: 20px 20px; 
+    border: none; 
+    cursor: pointer; 
+	background-image:url(../images/lune.png);
+	position:fixed;
+	top:0;
+	right:0;
+}
+p{
+	text-align:justify;
+}
+
+/*Dark Mode*/
+.dark-mode {
+    background-color: rgba(80,80,80,1);
+    color: #fff;
+}
+.dark-mode main .paragraphe {
+	background-color:rgba(60,60,60,1);
+}
+
+.dark-mode main button {
+    background-color: rgba(223, 207, 207,0);
+    display: inline-block; 
+    padding: 20px 20px;
+    border: none; 
+    cursor: pointer; 
+	background-image:url(../images/soleil.png);
+	background-size:40px,40px;
+	position:fixed;
+	top:0;
+	right:0;
+}
+
+/*Menue Navigation*/
+nav a {
+position: relative;
+font-size: 1.1em;
+font-weight: 500;
+color: rgba(0,0,0,1);
+text-decoration: none;
+font-weight:bold;
+padding: 6px 20px;
+transition: 0.5s;
+}
+nav a:hover {
+color: rgba(0,0,0,1);
+}
+nav a span {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -1;
+border-bottom: 2px solid #bef;
+border-radius: 15px;
+transform: scale(0) translateY(50px);
+opacity: 0;
+transition: 0.5s;
+}
+nav a:hover span {
+transform: scale(1) translateY(0); 
+opacity: 1;
+}
+
+
+/* carousselle d'image*/
+#slider {
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+#precedent,
+#suivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+#precedent {
+    left: 0;
+}
+
+#suivant {
+    right: 0;
+}
+
+#slider:hover #precedent,
+#slider:hover #suivant {
+    opacity: 0.60;
+}
+
+
+/* Bouton ENT*/
+
+.btn-grad {
+			position: relative; 
+			float: right; 
+			bottom: 10px; 
+			right: 10px; 
+            background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);;
+            margin: 20px;
+            padding: 15px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+			text-decoration: none;
+            display: block;
+}
+
+.btn-grad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+}
+         
+.dark-mode .btn-grad {
+            background-image: linear-gradient(to right, #485563 0%, #29323c  51%, #485563  100%);
+            margin: 20px;
+            padding: 15px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+			text-decoration: none;
+            color: white;            
+            box-shadow: 0 0 20px #111;
+            border-radius: 10px;
+            display: block;
+}
+
+.dark-mode .btn-grad:hover {
+            background-position: right center; 
+            color: #fff;
+            text-decoration: none;
+}
+         
+/*retourner en haut*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #eb5d1e;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+  
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+
+  margin:10px;
+  margin-top:10px;
+}
+
+.back-to-top:hover {
+  background: #ee7843;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*page skills*/
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.Haut,.Bas {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.Haut > div,.Bas > div {
+    flex: 1;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: rgba(122, 231, 255, 1);
+}
+.dark-mode .Haut > div{
+	background-color:rgba(60,60,60,1);
+}
+.dark-mode .Bas > div{
+	background-color:rgba(60,60,60,1);
+}
+
+main h2{
+	text-align:center;
+}
+
+i{
+	text-align:center;
+	font-size:25px;
+	margin-left:120px; 
+}
+
+p{
+	text-align:justify;
+}
+
+/*career*/
+.Esport {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    margin-top: 10px;
+    padding: 0px;
+    border-radius: 25px;
+    background-color: rgba(122, 231, 255, 1);
+    position: relative; 
+}
+
+.dark-mode .Esport {
+    background-color: rgba(60, 60, 60, 1);
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+	position:relative;
+	float: right; 
+    max-height: 100%;
+    border-top-right-radius: 25px;
+}
+
+.Content {
+	margin-left: 10px;
+    margin-right: 330px;
+    text-align: justify;
+}
+
+.salaire {
+    position: absolute;
+    bottom: 10px;
+    right: 130px;
+    margin: 0px;
+}
+.Sport img{
+	max-height:100%;
+	height:613px;
+	max-width:320px;
+	border-bottom-right-radius: 25px;
+}
+.Sport {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    margin-top: 10px;
+	margin-bottom: 10px;
+    padding: 0px;
+    border-radius: 25px;
+    background-color: rgba(122, 231, 255, 1);
+    position: relative;
+}
+
+.dark-mode .Sport {
+    background-color: rgba(60, 60, 60, 1);
+}
+
+/*lien*/
+.container-wrapper {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+	max-height:500px;
+    perspective: 800px;
+    margin: 10px; 
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front-side, .back-side {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-side {
+    background-color: rgba(122, 231, 255, 1);
+    background-size: 100% 100%;
+}
+
+.back-side {
+    background-color: rgba(122, 231, 255, 1);
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 5rem;
+}
+.dark-mode .back-side{
+	background-color: rgba(60, 60, 60, 1);	
+}
+.dark-mode .front-side{
+	background-color: rgba(60, 60, 60, 1);	
+}
+.container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+.container img{
+	max-height:100%;
+	height:422px;
+	max-width:350px;
+    border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+.base{
+	height:383px;
+}
+.container p{
+	margin-left:5px;
+	margin-right:5px;
+}
+.pied{
+	margin-top:40px;
+}
+/*ressource*/
+.ressource{
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    padding: 0px;
+    border-radius: 25px;
+    background-color: rgba(122, 231, 255, 1);
+    position: relative;
+}
+.dark-mode .ressource{
+	background-color: rgba(60, 60, 60, 1);	
+}
+.ressource ul{
+	margin-left:20px;
+}
+a{
+	color:black;
+	
+}
+.dark-mode a {
+	color:white;
+}
+
+
+/*Changement de lettre*/
+.animated-text {
+  font-family: "Space Mono", monospace;
+  font-size: 32px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dark-mode .animated-text{
+	color:white;
+}
+	
+
+
+
+
